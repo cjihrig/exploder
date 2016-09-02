@@ -25,4 +25,8 @@ app.use(function (req, res) {
 
 ## API
 
-For a complete list of methods, see the [boom](https://www.npmjs.com/package/boom) documentation.
+For a complete list of methods offered by boom, see the [boom](https://www.npmjs.com/package/boom) documentation.
+
+`exploder` also provides the following options when setting up the middleware:
+
+- `format(err)` (function) - A function that formats the boom error before replying to the client. This only applies to functions that send a response to the client (i.e. not `wrap()` or `create()`). By default, the boom error's `output.payload` is sent as the response payload. If a `format()` function is provided, the complete boom error is passed as the only argument, and the return value is sent as the response payload.

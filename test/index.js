@@ -99,4 +99,62 @@ describe('Exploder', () => {
       res.boom.badGateway('naughty gateway', { bar: 'baz' });
     });
   });
+
+  it('supports custom format() functions', (done) => {
+    const exploder = Exploder({
+      format (err) {
+        return {
+          msg: err.message,
+          output: {
+            statusCode: 999,
+            payload: err.data
+          }
+        };
+      }
+    });
+
+    let statusCode = 0;
+    const res = {
+      status (code) {
+        statusCode = code;
+        return this;
+      },
+      send (payload) {
+        expect(statusCode).to.equal(404);
+        expect(payload).to.equal({
+          msg: 'sorry, not found',
+          output: {
+            statusCode: 999,
+            payload: { id: 'foo' }
+          }
+        });
+        done();
+      }
+    };
+
+    exploder(null, res, function next () {
+      res.boom.notFound('sorry, not found', { id: 'foo' });
+    });
+  });
+
+  it('throws if format() is not a function', (done) => {
+    function fail (format) {
+      expect(() => {
+        Exploder({ format });
+      }).to.throw(TypeError, 'format must be a function');
+    }
+
+    fail(null);
+    fail({});
+    fail(/foo/);
+    fail(true);
+    fail(false);
+    fail(NaN);
+    fail(Infinity);
+    fail(0);
+    fail(1);
+    fail('');
+    fail('foo');
+    done();
+  });
 });
