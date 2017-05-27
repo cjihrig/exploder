@@ -21,12 +21,12 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "boom": "4.x.x"
+    "boom": "5.x.x"
   },
   "devDependencies": {
     "belly-button": "3.x.x",
-    "code": "3.x.x",
-    "lab": "11.x.x"
+    "code": "4.x.x",
+    "lab": "13.x.x"
   },
   "keywords": [
     "boom",
