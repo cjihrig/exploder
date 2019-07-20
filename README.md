@@ -1,12 +1,11 @@
 # exploder
 
 [![Current Version](https://img.shields.io/npm/v/exploder.svg)](https://www.npmjs.org/package/exploder)
-[![Build Status via Travis CI](https://travis-ci.org/continuationlabs/exploder.svg?branch=master)](https://travis-ci.org/continuationlabs/exploder)
-![Dependencies](http://img.shields.io/david/continuationlabs/exploder.svg)
+[![Build Status via Travis CI](https://travis-ci.org/cjihrig/exploder.svg?branch=master)](https://travis-ci.org/cjihrig/exploder)
+![Dependencies](http://img.shields.io/david/cjihrig/exploder.svg)
+[![belly-button-style](https://img.shields.io/badge/eslint-bellybutton-4B32C3.svg)](https://github.com/cjihrig/belly-button)
 
-[![belly-button-style](https://cdn.rawgit.com/continuationlabs/belly-button/master/badge.svg)](https://github.com/continuationlabs/belly-button)
-
-HTTP-friendly error objects. This is a port of [hapi](https://www.npmjs.com/package/hapi)'s [boom](https://www.npmjs.com/package/boom) module as [express](https://www.npmjs.com/package/express) middleware. It is based on [express-boom](https://www.npmjs.com/package/express-boom).
+HTTP-friendly error objects. This is a port of the [boom](https://www.npmjs.com/package/boom) module as [express](https://www.npmjs.com/package/express) middleware. It is based on [express-boom](https://www.npmjs.com/package/express-boom).
 
 ## Example
 

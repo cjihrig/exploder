@@ -71,7 +71,6 @@ describe('Exploder', () => {
           headers: {}
         }
       });
-      expect(err).to.equal(Boom.create(401, 'not very authorized', { foo: 'bar' }));
       done();
     });
   });

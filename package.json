@@ -2,20 +2,20 @@
   "name": "exploder",
   "version": "1.0.0",
   "description": "Express port of Boom",
-  "author": "Continuation Labs <contact@continuation.io> (http://continuation.io/)",
+  "author": "Colin J. Ihrig <cjihrig@gmail.com> (http://www.cjihrig.com/)",
   "main": "lib/index.js",
-  "homepage": "https://github.com/continuationlabs/exploder",
+  "homepage": "https://github.com/cjihrig/exploder",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/continuationlabs/exploder.git"
+    "url": "git+https://github.com/cjihrig/exploder.git"
   },
   "bugs": {
-    "url": "https://github.com/continuationlabs/exploder/issues"
+    "url": "https://github.com/cjihrig/exploder/issues"
   },
   "license": "MIT",
   "scripts": {
     "lint": "belly-button -f",
-    "test": "npm run lint && lab -v -a code -t 100"
+    "test": "npm run lint && lab -v -a code --leaks -t 100"
   },
   "engines": {
     "node": ">=4.0.0"
